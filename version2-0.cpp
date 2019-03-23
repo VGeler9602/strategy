@@ -127,8 +127,7 @@ int change_col_to_num(string str){
             }
             cout<<"}"<<endl;
         }
-    } ;
-    vector <PLAYER> Player ;
+    } Player[3];
 
 /* Game */
     int MyID ;
@@ -419,12 +418,11 @@ void Read() {
             P.nob.push_back(N);
         }
 
-        Player = P;
+        Player[i] = P;
     }
     //out_begin_players
-    vector <PLAYER>::iterator pp;
-    for (pp = Player.begin(); pp != Player.end(); pp++){
-        (*pp).out();
+    for (int i = 0 ; i < 3; i++ ){
+        Player[i].out();
     }
     //out_end_players
     in.close();
